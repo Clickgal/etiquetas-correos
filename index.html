@@ -4,77 +4,163 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Etiquetas Correos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  body {
-    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
-    background: #f4f4f5;
-    margin: 0;
-    padding: 16px;
-    color: #1a1a1a;
+  * {
+    box-sizing: border-box;
   }
-  h1 {
-    font-size: 20px;
-    margin-bottom: 4px;
+  body {
+    font-family: 'Inter', -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #eef3fb;
+    margin: 0;
+    padding: 18px 14px 40px;
+    color: #10265b;
+  }
+  .cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #d7e6fb;
+  }
+  .cabecera-izq {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .icono-cabecera {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: #1d5fd6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .icono-cabecera svg {
+    width: 18px;
+    height: 18px;
+    stroke: white;
+  }
+  .titulo {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
   }
   .contador {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 16px;
+    background: #1d5fd6;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 999px;
+    min-width: 24px;
+    text-align: center;
   }
   .tarjeta {
     background: white;
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 14px 16px;
     margin-bottom: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    display: flex;
+    gap: 12px;
+    box-shadow: 0 1px 3px rgba(16, 38, 91, 0.08);
+  }
+  .franja {
+    width: 4px;
+    border-radius: 4px;
+    background: #1d5fd6;
+    flex-shrink: 0;
+  }
+  .contenido-tarjeta {
+    flex: 1;
+    min-width: 0;
   }
   .nombre {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
   .direccion {
-    font-size: 14px;
-    color: #444;
-    line-height: 1.4;
-    margin-bottom: 10px;
+    font-size: 13.5px;
+    color: #5b6b8c;
+    line-height: 1.5;
+    margin-bottom: 9px;
   }
   .tracking {
     font-size: 11px;
-    color: #999;
-    margin-bottom: 10px;
+    color: #9aa8c4;
+    letter-spacing: 0.02em;
+    margin-bottom: 11px;
   }
   .boton {
-    display: inline-block;
-    background: #2563eb;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #1d5fd6;
     color: white;
     text-decoration: none;
     padding: 8px 14px;
-    border-radius: 6px;
-    font-size: 14px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 500;
+  }
+  .boton svg {
+    width: 15px;
+    height: 15px;
+    stroke: white;
   }
   .vacio {
     text-align: center;
-    color: #888;
-    margin-top: 60px;
+    padding: 60px 20px;
+    color: #5b6b8c;
+  }
+  .vacio svg {
+    width: 40px;
+    height: 40px;
+    stroke: #9aa8c4;
+    margin-bottom: 12px;
   }
 </style>
 </head>
 <body>
-<h1>Etiquetas Correos</h1>
-<div class="contador">2 etiqueta(s)</div>
+<div class="cabecera">
+  <div class="cabecera-izq">
+    <div class="icono-cabecera">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+    </div>
+    <p class="titulo">Etiquetas Correos</p>
+  </div>
+  <span class="contador">2</span>
+</div>
 <div class="tarjeta">
-  <div class="nombre">pierre bogda</div>
-  <div class="direccion">Prenzlauer Berg.18<br>10405 Berlin<br>DEU</div>
-  <div class="tracking">LX554693737ES</div>
-  <a class="boton" href="labels/etiqueta (21).pdf" target="_blank">Ver etiqueta</a>
+  <div class="franja"></div>
+  <div class="contenido-tarjeta">
+    <div class="nombre">pierre bogda</div>
+    <div class="direccion">Prenzlauer Berg.18<br>10405 Berlin<br>DEU</div>
+    <div class="tracking">LX554693737ES</div>
+    <a class="boton" href="labels/etiqueta (21).pdf" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Ver etiqueta
+    </a>
+  </div>
 </div>
 
 <div class="tarjeta">
-  <div class="nombre">Ann Jass</div>
-  <div class="direccion">32839 Tulip Ranch Circle<br>92596-8259 Winchester<br>USA</div>
-  <div class="tracking">LX554697138ES</div>
-  <a class="boton" href="labels/etiqueta (22).pdf" target="_blank">Ver etiqueta</a>
+  <div class="franja"></div>
+  <div class="contenido-tarjeta">
+    <div class="nombre">Ann Jass</div>
+    <div class="direccion">32839 Tulip Ranch Circle<br>92596-8259 Winchester<br>USA</div>
+    <div class="tracking">LX554697138ES</div>
+    <a class="boton" href="labels/etiqueta (22).pdf" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Ver etiqueta
+    </a>
+  </div>
 </div>
 
 </body>
